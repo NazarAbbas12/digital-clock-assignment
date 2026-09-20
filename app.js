@@ -1,14 +1,21 @@
 
 function setTime(){
-    var hour = document.getElementById('hour');
-    var min = document.getElementById('min');
-    var sec = document.getElementById('sec');
-
     const date = new Date();
+    
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    var sec = date.getSeconds();
 
-    hour.innerText = date.getHours();
-    min.innerText = date.getMinutes();
-    sec.innerText = date.getSeconds();
+    if(hour == 0){
+        hour = 12;
+    }
+    if(hour>12){
+        hour = hour-12;
+    }
+
+    document.getElementById('hour').innerText = hour;
+    document.getElementById('min').innerText = min;
+    document.getElementById('sec').innerText = sec;
 
 }
 
