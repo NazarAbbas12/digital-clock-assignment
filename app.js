@@ -5,6 +5,7 @@ function setTime(){
     var hour = date.getHours();
     var min = date.getMinutes();
     var sec = date.getSeconds();
+    var system = hour>=12? 'pm':'am';
 
     if(hour == 0){
         hour = 12;
@@ -16,7 +17,7 @@ function setTime(){
     document.getElementById('hour').innerText = hour;
     document.getElementById('min').innerText = min;
     document.getElementById('sec').innerText = sec;
-
+    document.getElementById('system').innerText = system;
 }
 
 setTime()
