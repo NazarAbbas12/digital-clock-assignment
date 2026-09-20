@@ -13,6 +13,12 @@ function setTime(){
     if(hour>12){
         hour = hour-12;
     }
+    if(min<10){
+        min = '0'+min;
+    }
+    if(sec<10){
+        sec = '0'+sec;
+    }
 
     document.getElementById('hour').innerText = hour;
     document.getElementById('min').innerText = min;
